@@ -40,9 +40,9 @@ def rgb_to_grayscale(image):
 
 @st.cache_resource
 def load_models():
-    classification_model = loaded_model = tf.keras.models.load_model(r"models\model2.h5", custom_objects={'rgb_to_grayscale': rgb_to_grayscale})
-    label_encoder = joblib.load(r"models\label_encoder.pkl")
-    with open(r"models\regression_model.pkl", "rb") as f:
+    classification_model = loaded_model = tf.keras.models.load_model(r"models/model2.h5", custom_objects={'rgb_to_grayscale': rgb_to_grayscale})
+    label_encoder = joblib.load(r"models/label_encoder.pkl")
+    with open(r"models/regression_model.pkl", "rb") as f:
         regression_model = pickle.load(f)
     return label_encoder, regression_model, classification_model
     
