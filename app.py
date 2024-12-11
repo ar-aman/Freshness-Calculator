@@ -115,9 +115,9 @@ if st.session_state.run_camera:
     img = st.camera_input("Take a picture")
 
     if img is not None:
-        frame = np.array(img)
-        bbox, labels, confidences = cv.detect_common_objects(frame)
-        output_image = draw_bbox_without_labels(frame, bbox)
+        # frame = np.array(img)
+        bbox, labels, confidences = cv.detect_common_objects(img)
+        output_image = draw_bbox_without_labels(img, bbox)
 
         cropped_objects = []
         for box in bbox:
