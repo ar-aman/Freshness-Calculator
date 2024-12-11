@@ -132,7 +132,7 @@ def draw_bbox_without_labels(frame, bbox):
     return frame
 
 if st.session_state.run_camera:
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
 
     if not cap.isOpened():
         st.error("Error: Could not open webcam.")
